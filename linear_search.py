@@ -12,22 +12,25 @@ def linear_search(my_list, key):
         
     return result
 
-my_list = [4, 3, 2, 1, 5, 7, 6]
 
-r = linear_search(my_list, 3)
-if r == 1:
-    print("Test A passed")
-else:
-    print("Test A failed. Expected 1 and got", r)
- 
-r = linear_search(my_list, 2)
-if r == 2:
-    print("Test B passed")
-else:
-    print("Test B failed. Expected 2 and got", r)
- 
-r = linear_search(my_list, 10)
-if r == -1:
-    print("Test C passed")
-else:
-    print("Test C failed. Expected -1 and got", r)
+if __name__ == '__main__':
+
+    my_list = [4, 3, 2, 1, 5, 7, 6]
+
+    r = linear_search(my_list, 3)
+    if r == 1:
+        print("Test A passed")
+    else:
+        print("Test A failed. Expected 1 and got", r)
+    
+    r = linear_search(my_list, 2)
+    if r == 2:
+        print("Test B passed")
+    else:
+        print("Test B failed. Expected 2 and got", r)
+    
+    r = linear_search(my_list, 10)
+    if r == -1:
+        print("Test C passed")
+    else:
+        print("Test C failed. Expected -1 and got", r)

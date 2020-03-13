@@ -28,12 +28,13 @@ def isBleak(n) :
     return True
       
 # Driver code 
-if(isBleak(3)) : 
-    print( "Yes") 
-else : 
-    print("No") 
-  
-if(isBleak(4)) : 
-    print("Yes") 
-else :  
-    print( "No") 
+if __name__ == '__main__':
+    if(isBleak(3)) : 
+        print( "Yes") 
+    else : 
+        print("No") 
+    
+    if(isBleak(4)) : 
+        print("Yes") 
+    else :  
+        print( "No") 

@@ -36,17 +36,18 @@ def mergeSort(arr):
             j += 1
             k += 1
   
-# Testing the code:    
-def print_list(my_list):
-    for item in my_list:
-        print("{:3}".format(item), end="")
-    print()
+# Testing the code:  
+if __name__ == '__main__':  
+    def print_list(my_list):
+        for item in my_list:
+            print("{:3}".format(item), end="")
+        print()
 
-my_list = []
-for i in range(10):
-    my_list.append(random.randrange(100))
- 
-# Try out the sort
-print_list(my_list)
-mergeSort(my_list)
-print_list(my_list)
+    my_list = []
+    for i in range(10):
+        my_list.append(random.randrange(100))
+    
+    # Try out the sort
+    print_list(my_list)
+    mergeSort(my_list)
+    print_list(my_list)

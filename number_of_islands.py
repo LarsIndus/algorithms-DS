@@ -40,7 +40,7 @@ def number_of_islands(grid):
 
 # In this solution we keep track of the visited fields in a separate array.
  
- # Helper function: Depht-first search
+ # Helper function: Depth-first search
 def dfs_alternative(grid, visited, i, j):
     if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != 1 or visited[i][j]:
         return

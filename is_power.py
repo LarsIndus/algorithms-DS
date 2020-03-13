@@ -18,14 +18,6 @@ def is_power(x, y):
             pow += 1
         return False
 
-is_power(5, 1)
-is_power(1, 1)
-is_power(1, 5)
-is_power(5, 5)
-is_power(5, 3)
-is_power(5, 25)
-is_power(19, 19 ** 15)
-
 
 # Shorter solution:
 
@@ -45,12 +37,21 @@ def is_power_short(x, y):
     print(pow == y)
     return (pow == y)
 
-is_power_short(5, 1)
-is_power_short(1, 1)
-is_power_short(1, 5)
-is_power_short(5, 5)
-is_power_short(5, 3)
-is_power_short(5, 25)
-is_power_short(19, 19 ** 15)           
+if __name__ == '__main__':
+    is_power(5, 1)
+    is_power(1, 1)
+    is_power(1, 5)
+    is_power(5, 5)
+    is_power(5, 3)
+    is_power(5, 25)
+    is_power(19, 19 ** 15)
+
+    is_power_short(5, 1)
+    is_power_short(1, 1)
+    is_power_short(1, 5)
+    is_power_short(5, 5)
+    is_power_short(5, 3)
+    is_power_short(5, 25)
+    is_power_short(19, 19 ** 15)           
             
         

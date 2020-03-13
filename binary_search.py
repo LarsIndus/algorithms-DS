@@ -41,43 +41,46 @@ def binary_search_recursive(my_list, key, lower_bound, upper_bound):
 
 
 # Test the two functions:
-my_list = [0, 3, 5, 12, 18, 50, 70, 78]
 
-# 1. iterative method
-r = binary_search(my_list, 3)
-if r == 1:
-    print("Test A passed (iterative).")
-else:
-    print("Test A failed (iterative). Expected 1 and got", r)
- 
-r = binary_search(my_list, 5)
-if r == 2:
-    print("Test B passed (iterative).")
-else:
-    print("Test B failed (iterative). Expected 2 and got", r)
- 
-r = binary_search(my_list, 10)
-if r == -1:
-    print("Test C passed (iterative).")
-else:
-    print("Test C failed (iterative). Expected -1 and got", r)
+if __name__ == '__main__':
+
+    my_list = [0, 3, 5, 12, 18, 50, 70, 78]
+
+    # 1. iterative method
+    r = binary_search(my_list, 3)
+    if r == 1:
+        print("Test A passed (iterative).")
+    else:
+        print("Test A failed (iterative). Expected 1 and got", r)
+    
+    r = binary_search(my_list, 5)
+    if r == 2:
+        print("Test B passed (iterative).")
+    else:
+        print("Test B failed (iterative). Expected 2 and got", r)
+    
+    r = binary_search(my_list, 10)
+    if r == -1:
+        print("Test C passed (iterative).")
+    else:
+        print("Test C failed (iterative). Expected -1 and got", r)
 
 
-# 2. recursive method
-r = binary_search_recursive(my_list, 3, 0, len(my_list) - 1)
-if r == 1:
-    print("Test A passed (recursive).")
-else:
-    print("Test A failed (recursive). Expected 1 and got", r)
- 
-r = binary_search_recursive(my_list, 5, 0, len(my_list) - 1)
-if r == 2:
-    print("Test B passed (recursive).")
-else:
-    print("Test B failed (recursive). Expected 2 and got", r)
- 
-r = binary_search_recursive(my_list, 10, 0, len(my_list) - 1)
-if r == -1:
-    print("Test C passed (recursive).")
-else:
-    print("Test C failed (recursive). Expected -1 and got", r)
+    # 2. recursive method
+    r = binary_search_recursive(my_list, 3, 0, len(my_list) - 1)
+    if r == 1:
+        print("Test A passed (recursive).")
+    else:
+        print("Test A failed (recursive). Expected 1 and got", r)
+    
+    r = binary_search_recursive(my_list, 5, 0, len(my_list) - 1)
+    if r == 2:
+        print("Test B passed (recursive).")
+    else:
+        print("Test B failed (recursive). Expected 2 and got", r)
+    
+    r = binary_search_recursive(my_list, 10, 0, len(my_list) - 1)
+    if r == -1:
+        print("Test C passed (recursive).")
+    else:
+        print("Test C failed (recursive). Expected -1 and got", r)
