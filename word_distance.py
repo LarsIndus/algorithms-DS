@@ -29,14 +29,14 @@ def edit_distance(word1, word2):
             if word1[j - 1] == word2[i - 1]:
                 mat[i][j] = mat[i - 1][j - 1]
             else:
-                mat[i][j] = min(mat[i - 1][j], mat[i][j - 1],  mat[i - 1][j - 1]) + 1
+                mat[i][j] = min(mat[i - 1][j], mat[i][j - 1], mat[i - 1][j - 1]) + 1
             
     return mat[len(word2)][len(word1)]
 
 
 # Another similar problem is to check whether the edit distance is exactly 1.
 # Of course we could use the above function now, but there is also a direct approach.
-# This solution has O(max(n,m)) time complexity and constand space complexity.
+# This solution has O(max(n,m)) time complexity and constant space complexity.
 
 def edit_distance_one(word1, word2):
     

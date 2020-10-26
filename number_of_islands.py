@@ -11,7 +11,7 @@
 # Source: https://www.youtube.com/watch?v=z5c2pJeMqOw
 
 
-# Helper function: Depht-first search
+# Helper function: Depth-first search
 def dfs(grid, i, j):
     if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != 1:
         return

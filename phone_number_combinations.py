@@ -7,8 +7,8 @@
 # Solution: https://www.youtube.com/watch?v=s1TuIgs1gMs
 
 def letter_combinations(digits):
-    if len(digits) == 0: return []
     sol = []
+    if len(digits) == 0: return sol
     letter_combinations_helper(digits, '', sol)
     return sol
 

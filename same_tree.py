@@ -21,14 +21,10 @@ class newNode:
 def is_identical(root1, root2):
   
     if root1 is None and root2 is None: return True
-    if root1 is not None and root2 is None: return False
-    if root1 is None and root2 is not None: return False
+    if root1 is None or root2 is None: return False
     if root1.data != root2.data: return False
     
-    is_identical_left = is_identical(root1.left, root2.left)
-    is_identical_right = is_identical(root1.right, root2.right)
-    
-    return is_identical_left == is_identical_right
+    return is_identical(root1.left, root2.left) and is_identical(root1.right, root2.right)
       
 # Testing ---------------------------------------------------------------------------- 
 if __name__ == '__main__':
