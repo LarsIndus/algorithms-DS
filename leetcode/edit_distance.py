@@ -1,18 +1,16 @@
-# Given two strings, we are looking for the minimum number of edits needed
-# to convert one string into the other.
-# Allowed edits are:
-#
-# 1. Removing a character.
-# 2. Inserting a character.
-# 3. Replacing a character.
-#
-# The below solution has time and space complexity of O(nm),
-# with n and m denoting the length of the strings.
-#
-# Sources:
-#
-# https://www.youtube.com/watch?v=z6wr9E-Bm1c&t=51s
-# https://www.youtube.com/watch?v=We3YDTzNXEk
+"""
+Leetcode Problem 72:
+
+Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
+
+You have the following three operations permitted on a word:
+
+    - Insert a character
+    - Delete a character
+    - Replace a character
+
+Source: https://www.youtube.com/watch?v=hlbuyOgxHbs
+"""
 
 def edit_distance(word1, word2):
     

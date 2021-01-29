@@ -1,12 +1,13 @@
-# Leetcode problem 100:
-# Check whether two binary trees are equal.
-# Time complexity of the below solution is O(n + m),
-# with n and m denoting the number of the nodes of each tree.
-#
-# Source: https://www.geeksforgeeks.org/check-whether-the-two-binary-search-trees-are-identical-or-not/
-#
-# (code slightly adjusted)
+"""
+Leetcode problem 100:
 
+Check whether two binary trees are equal.
+Time complexity of the below solution is O(n + m),
+ with n and m denoting the number of the nodes of each tree.
+
+Source: https://www.geeksforgeeks.org/check-whether-the-two-binary-search-trees-are-identical-or-not/
+(code slightly adjusted)
+"""
   
 # Node implementation ------------------------------------------------------------------
 class newNode:  

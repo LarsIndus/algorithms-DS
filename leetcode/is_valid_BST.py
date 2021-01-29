@@ -1,6 +1,8 @@
-# Leetcode Problem 98:
+"""
+Leetcode Problem 98:
 
-# Source: https://www.youtube.com/watch?v=ofuXorE-JKE
+Source: https://www.youtube.com/watch?v=ofuXorE-JKE
+"""
 
 # Node implementation ------------------------------------------------------------------
 class newNode:  

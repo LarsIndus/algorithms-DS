@@ -1,3 +1,15 @@
+"""
+Leetcode Problem 507:
+
+A perfect number is a positive integer that is equal to the sum of its positive divisors,
+excluding the number itself. A divisor of an integer x is an integer that can divide x evenly.
+
+Given an integer n, return true if n is a perfect number, otherwise return false.
+
+Time complexity is O(n + m), with n and m denoting the lengths of the string.
+Space complexity is O(1) as there is only a finite number of possible characters.
+"""
+
 import math
 
 def is_perfect(n):

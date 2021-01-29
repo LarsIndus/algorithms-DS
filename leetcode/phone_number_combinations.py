@@ -1,10 +1,12 @@
-# Leetcode Problem 17:
-# Given a string containing digits from 2 to 9,
-# return all possible letter combinations that the number could represent.
-# Each digit represents a certain set of letters as on an 'old' phone (see mapping below).
-# Time and space complexity is O(4^n) (as there are at most 4 characters on a number button).
-#
-# Solution: https://www.youtube.com/watch?v=s1TuIgs1gMs
+"""
+Leetcode Problem 17:
+Given a string containing digits from 2 to 9,
+return all possible letter combinations that the number could represent.
+Each digit represents a certain set of letters as on an 'old' phone (see mapping below).
+Time and space complexity is O(4^n) (as there are at most 4 characters on a number button).
+
+Solution: https://www.youtube.com/watch?v=s1TuIgs1gMs
+"""
 
 def letter_combinations(digits):
     sol = []

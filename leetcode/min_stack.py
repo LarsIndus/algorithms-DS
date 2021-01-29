@@ -1,15 +1,19 @@
+"""
 # Leetcode Problem 155:
-# Design a stack that supports push, pop, top and retrieving the minimum element in constant time.
-# push(x): Push element x onto stack.
-# pop(): Remove the element on top of the stack.
-# top(): Get the top element.
-# get_min(): Retrieve the minimum element in the stack (in constant time).
-#
+
+Design a stack that supports push, pop, top and retrieving the minimum element in constant time.
+
+    - push(x): Push element x onto stack.
+    - pop(): Remove the element on top of the stack.
+    - top(): Get the top element.
+    - get_min(): Retrieve the minimum element in the stack (in constant time).
+
+Source: https://www.youtube.com/watch?v=2wqSq2Lde-Q
+"""
+
 # Every time we push, we update the current minimum value.
 # Similarly, every time we pop, we update the minimum value by traversing through the remaining elements.
 # This way, the get_min() method can return the minimum in constant time.
-#
-# Source: https://www.youtube.com/watch?v=2wqSq2Lde-Q
 
 class Min_Stack():
     

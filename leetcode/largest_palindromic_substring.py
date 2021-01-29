@@ -1,6 +1,11 @@
-# This script takes a string and returns the longest palindromic substring.
-# Time complexity: O(n^2)
-# Space complexity: O(1) (use three pointers, see below)
+"""
+Leetcode Problem 5:
+
+Given a string s, return the longest palindromic substring in s.
+
+Time complexity: O(n^2)
+Space complexity: O(1) (use three pointers, see below)
+"""
 
 # First, define a helper function that returns the largest palindromic substring
 # starting from a left and right index (by gradually moving them outwards if matching characters are found).

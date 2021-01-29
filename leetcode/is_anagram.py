@@ -1,5 +1,10 @@
-# Time complexity is O(n + m), with n and m denoting the lengths of the string.
-# Space complexity is O(1) as there is only a finite number of possible characters.
+"""
+Leetcode Problem 242:
+Given two strings s and t , write a function to determine if t is an anagram of s.
+
+Time complexity is O(n + m), with n and m denoting the lengths of the string.
+Space complexity is O(1) as there is only a finite number of possible characters.
+"""
 
 def is_anagram(s1, s2):
     

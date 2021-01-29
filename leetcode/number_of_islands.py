@@ -1,14 +1,18 @@
-# Leetcode Problem 200:
-# Given a two-dimensional grid of 1s (land) and 0s (water), count the number of islands.
-# An island is surrounded by water and is formed by connecting adjacent lands
-# horizontally or vertically.
-# We may assume that all four edges of the grid are surrounded by water.
-# Time complexity of this solution is O(nm), with n and m denoting the dimensions of the grid.
-# Space complexity here is O(1).
-# We can also use a 'visited' array of the same size as the grid, giving O(nm) space complexity,
-# see the alternative solution.
-#
-# Source: https://www.youtube.com/watch?v=z5c2pJeMqOw
+"""
+Leetcode Problem 200:
+
+Given a two-dimensional grid of 1s (land) and 0s (water), count the number of islands.
+An island is surrounded by water and is formed by connecting adjacent lands
+horizontally or vertically.
+We may assume that all four edges of the grid are surrounded by water.
+
+Time complexity of this solution is O(nm), with n and m denoting the dimensions of the grid.
+Space complexity here is O(1).
+We can also use a 'visited' array of the same size as the grid, giving O(nm) space complexity,
+see the alternative solution.
+
+Source: https://www.youtube.com/watch?v=z5c2pJeMqOw
+"""
 
 
 # Helper function: Depth-first search

@@ -1,11 +1,14 @@
-# Leetcode Problem 20:
-# Given a string consisting of '(', '{', '[', ')', '}', ']',
-# check whether it is valid, i.e., if the opening and closing of parentheses is correct.
-# Time complexity of this solution is O(n), with n being the length of the string.
-# Space complexity is O(n) in the worst case, O(1) otherwise.
-#
-# Source: https://www.youtube.com/watch?v=hlbuyOgxHbs
+"""
+Leetcode Problem 20:
 
+Given a string consisting of '(', '{', '[', ')', '}', ']',
+check whether it is valid, i.e., if the opening and closing of parentheses is correct.
+
+Time complexity of this solution is O(n), with n being the length of the string.
+Space complexity is O(n) in the worst case, O(1) otherwise.
+
+Source: https://www.youtube.com/watch?v=hlbuyOgxHbs
+"""
 
 # First define two helper functions
 def is_open(parenthesis):

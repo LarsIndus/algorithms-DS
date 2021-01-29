@@ -1,11 +1,14 @@
-# Leetcode Problem 112:
-# Given a binary tree and a target sum, decide whether there is a path
-# from the root node to a leave, such that the sum of all nodes in this path equals the sum.
-# Time and space complexity of this solution is O(n),
-# with n denoting the number of nodes in the tree.
-#
-# Source: https://www.youtube.com/watch?v=IIPJ9tRYsg0
+"""
+Leetcode Problem 112:
 
+Given a binary tree and a target sum, decide whether there is a path
+from the root node to a leave, such that the sum of all nodes in this path equals the sum.
+
+Time and space complexity of this solution is O(n),
+with n denoting the number of nodes in the tree.
+
+Source: https://www.youtube.com/watch?v=IIPJ9tRYsg0
+"""
 
 # Node implementation ------------------------------------------------------------------
 class newNode:  

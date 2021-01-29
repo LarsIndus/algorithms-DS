@@ -1,7 +1,11 @@
-# Leetcode Problem 104:
-# Given a binary tree, what is the maximumm depth of the tree?
-# Time and space complexity is O(n) with n being the nuber of nodes in the tree.
-# Average space complexity is O(log n) for a balanced tree.
+"""
+Leetcode Problem 104:
+
+Given a binary tree, what is the maximumm depth of the tree?
+
+Time and space complexity is O(n) with n being the nuber of nodes in the tree.
+Average space complexity is O(log n) for a balanced tree.
+"""
 
 # Node implementation ------------------------------------------------------------------
 class newNode:  
