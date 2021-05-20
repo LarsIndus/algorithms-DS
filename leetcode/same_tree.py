@@ -1,15 +1,18 @@
 """
-Leetcode problem 100:
+Leetcode Problem 100: Same Tree (Easy)
 
-Check whether two binary trees are equal.
-Time complexity of the below solution is O(n + m),
- with n and m denoting the number of the nodes of each tree.
+Given two binary trees, write a function to check if they are the same or not.
+Two binary trees are considered the same if they are structurally identical
+and the nodes have the same value.
+
+Complexity for this solution:
+O(n + m) with n, m being the number of nodes in the trees.
 
 Source: https://www.geeksforgeeks.org/check-whether-the-two-binary-search-trees-are-identical-or-not/
 (code slightly adjusted)
 """
   
-# Node implementation ------------------------------------------------------------------
+# Node implementation --------------------------------------------------------
 class newNode:  
   
     # Construct to create a newNode  
@@ -18,17 +21,20 @@ class newNode:
         self.left = None
         self.right = None
 
-# Solution ----------------------------------------------------------------------------
+# Solution -------------------------------------------------------------------
 def is_identical(root1, root2):
   
     if root1 is None and root2 is None: return True
     if root1 is None or root2 is None: return False
     if root1.data != root2.data: return False
     
-    return is_identical(root1.left, root2.left) and is_identical(root1.right, root2.right)
+    is_identical_left = is_identical(root1.left, root2.left)
+    is_identical_right = is_identical(root1.right, root2.right)
+
+    return is_identical_left and is_identical_right
       
-# Testing ---------------------------------------------------------------------------- 
-if __name__ == '__main__':
+# Testing --------------------------------------------------------------------
+def main():
       
     # Test 1: Non-empty identical trees:
     root1 = newNode(5)
@@ -85,3 +91,6 @@ if __name__ == '__main__':
         print("Trees are identical.")
     else:
         print("Trees are not identical.")
+
+if __name__ == '__main__':
+    main()

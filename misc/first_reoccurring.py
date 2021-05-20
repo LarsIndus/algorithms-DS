@@ -32,3 +32,12 @@ def first_non_reoccurring(string):
             return char
         
     return None
+
+# Testing --------------------------------------------------------------------
+def main():
+    string = "ukulele"
+    print("First reoccurring: ", first_reoccurring(string), sep = "")
+    print("First non-reoccurring: ", first_non_reoccurring(string), sep = "")
+
+if __name__ == '__main__':
+    main()

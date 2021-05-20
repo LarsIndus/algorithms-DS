@@ -7,7 +7,6 @@ def binary_search(my_list, key):
     found = False
 
     while lower_bound <= upper_bound and not found:
-        
         middle_pos = (upper_bound + lower_bound) // 2
     
         if my_list[middle_pos] < key:
@@ -40,10 +39,8 @@ def binary_search_recursive(my_list, key, lower_bound, upper_bound):
         return binary_search_recursive(my_list, key, lower_bound, middle_pos - 1)
 
 
-# Test the two functions:
-
-if __name__ == '__main__':
-
+# Testing --------------------------------------------------------------------
+def main():
     my_list = [0, 3, 5, 12, 18, 50, 70, 78]
 
     # 1. iterative method
@@ -84,3 +81,6 @@ if __name__ == '__main__':
         print("Test C passed (recursive).")
     else:
         print("Test C failed (recursive). Expected -1 and got", r)
+
+if __name__ == '__main__':
+    main()

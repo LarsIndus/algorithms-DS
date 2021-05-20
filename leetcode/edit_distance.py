@@ -1,13 +1,16 @@
 """
-Leetcode Problem 72:
+Leetcode Problem 72: Edit Distance (Hard)
 
-Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
+Given two words word1 and word2, find the minimum number of operations
+required to convert word1 to word2.
+You have the following 3 operations permitted on a word:
 
-You have the following three operations permitted on a word:
+    1. Insert a character
+    2. Delete a character
+    3. Replace a character
 
-    - Insert a character
-    - Delete a character
-    - Replace a character
+Complexity for this solution:
+...
 
 Source: https://www.youtube.com/watch?v=hlbuyOgxHbs
 """
@@ -27,13 +30,15 @@ def edit_distance(word1, word2):
             if word1[j - 1] == word2[i - 1]:
                 mat[i][j] = mat[i - 1][j - 1]
             else:
-                mat[i][j] = min(mat[i - 1][j], mat[i][j - 1], mat[i - 1][j - 1]) + 1
+                mat[i][j] = min(mat[i - 1][j], mat[i][j - 1],
+                                mat[i - 1][j - 1]) + 1
             
     return mat[len(word2)][len(word1)]
 
 
 # Another similar problem is to check whether the edit distance is exactly 1.
-# Of course we could use the above function now, but there is also a direct approach.
+# Of course we could use the above function now,
+# but there is also a direct approach.
 # This solution has O(max(n,m)) time complexity and constant space complexity.
 
 def edit_distance_one(word1, word2):
@@ -52,7 +57,8 @@ def edit_distance_one(word1, word2):
     while i < n and j < m:
         
         # If the characters don't match, we need an edit.
-        # If we already used an edit before, we can exit the loop early (check below).
+        # If we already used an edit before, we
+        # can exit the loop early (check below).
         if word1[i] != word2[j]:
             if edits > 0:
                 print("Exited the loop, as number of edits exceeded 1 early.")
@@ -60,10 +66,12 @@ def edit_distance_one(word1, word2):
             edits += 1
         
         i += 1
-        j +=1
+        j += 1
     
-    # If the length of the strings is not equal, thus 1 (because we excluded a difference > 1 above),
-    # we need to continue one more time in the longer string and we need an edit.
+    # If the length of the strings is not equal, thus 1
+    # (because we excluded a difference > 1 above),
+    # we need to continue one more time in the longer string
+    # and we need an edit.
     if i < n:
         print("Checked i < n; i = ", i, " , j = ", j)
         edits += 1
@@ -71,5 +79,18 @@ def edit_distance_one(word1, word2):
         print("Checked j < m; i = ", i, " , j = ", j)
         edits += 1
     
-    print("Exited at end of function; number of edits is ", edits, ".", sep = "")
+    print("Exited at end of function; number of edits is ",
+          edits, ".", sep = "")
     return edits == 1
+
+# Testing --------------------------------------------------------------------
+def main():
+    word1 = "horse"
+    word2 = "ros"
+    print("Edit distance between '", word1, "' and '", word2, "': ",
+          edit_distance(word1, word2), sep = "")
+
+if __name__ == '__main__':
+    main()
+
+

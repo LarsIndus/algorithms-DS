@@ -1,9 +1,11 @@
-# This is an implementation of BFS in graphs.
-# Pass a graph as a dictionary, where the keys are nodes and the
-# values are lists of neighbors (only the neighbors 'below' are needed).
-# Note that this is not really a search, but merely a traversal through the whole graph
-# in order to visualize the algorithm.
-# The search itself can be added easily by checking whether the current node is the target.
+"""
+This is an implementation of BFS in graphs.
+Pass a graph as a dictionary, where the keys are nodes and the
+values are lists of neighbors (only the neighbors 'below' are needed).
+Note that this is not really a search, but merely a traversal through the whole graph
+in order to visualize the algorithm.
+The search itself can be added easily by checking whether the current node is the target.
+"""
 
 def BFS(graph, start):
     queue = [start]
@@ -19,8 +21,9 @@ def BFS(graph, start):
                 visited.add(neighbor)
                 queue.append(neighbor)
                 print(neighbor)
-        
-if __name__ == '__main__':       
+
+# Testing --------------------------------------------------------------------
+def main(): 
     graph = {
         'A' : ['B','C'],
         'B' : ['D', 'E'],
@@ -31,3 +34,6 @@ if __name__ == '__main__':
     }
     
     BFS(graph, 'A')
+
+if __name__ == '__main__':
+    main()

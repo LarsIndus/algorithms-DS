@@ -1,9 +1,11 @@
 """
-Leetcode Problem 242:
+Leetcode Problem 242: Valid Anagram (Easy)
+
 Given two strings s and t , write a function to determine if t is an anagram of s.
 
-Time complexity is O(n + m), with n and m denoting the lengths of the string.
-Space complexity is O(1) as there is only a finite number of possible characters.
+Complexity for this solution:
+O(max(n, m)) time (where n, m are the lenghts of the strings)
+and O(1) space (only 26 characters!).
 """
 
 def is_anagram(s1, s2):
@@ -35,7 +37,8 @@ def is_anagram(s1, s2):
     return letters1 == letters2
 
 # In an alternative solution, we can use just one dictionary.
-# The first for loop will be the same, the second uses the same dictionary but decrements the values.
+# The first for loop will be the same,
+# the second uses the same dictionary but decrements the values.
 # In the end, we check whether all values are 0.
 
 def is_anagram_alternative(s1, s2):
@@ -63,3 +66,12 @@ def is_anagram_alternative(s1, s2):
         if letters[letter] != 0: return False
         
     return True
+
+# Testing --------------------------------------------------------------------    
+def main():
+    s1 = "anagram"
+    s2 ="nagaram"
+    print(is_anagram(s1, s2))
+
+if __name__ == '__main__':
+    main()

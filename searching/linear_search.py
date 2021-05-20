@@ -12,9 +12,8 @@ def linear_search(my_list, key):
         
     return result
 
-
-if __name__ == '__main__':
-
+# Testing --------------------------------------------------------------------
+def main():
     my_list = [4, 3, 2, 1, 5, 7, 6]
 
     r = linear_search(my_list, 3)
@@ -34,3 +33,6 @@ if __name__ == '__main__':
         print("Test C passed")
     else:
         print("Test C failed. Expected -1 and got", r)
+
+if __name__ == '__main__':
+    main()

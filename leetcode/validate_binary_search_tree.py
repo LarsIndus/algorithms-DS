@@ -1,10 +1,21 @@
 """
-Leetcode Problem 98:
+Leetcode Problem 98: Validate Binary Search Tree (Medium)
+
+Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+
+A valid BST is defined as follows:
+
+    - The left subtree of a node contains only nodes with keys less than the node's key.
+    - The right subtree of a node contains only nodes with keys greater than the node's key.
+    - Both the left and right subtrees must also be binary search trees.
+
+Complexity for this solution:
+O(n) time and space
 
 Source: https://www.youtube.com/watch?v=ofuXorE-JKE
 """
 
-# Node implementation ------------------------------------------------------------------
+# Node implementation --------------------------------------------------------
 class newNode:  
   
     # Construct to create a newNode  
@@ -13,7 +24,7 @@ class newNode:
         self.left = None
         self.right = None
 
-# Solution -----------------------------------------------------------------------------
+# Solution -------------------------------------------------------------------
 def is_valid_BST(root):
     return helper(root, float("-inf"), float("inf"))
 
@@ -29,10 +40,8 @@ def helper(root, min_value, max_value):
     return valid_left and valid_right
         
         
-# Testing -------------------------------------------------------------------------------
-
-if __name__ == '__main__':
-    
+# Testing --------------------------------------------------------------------
+def  main():
     # Test 1: Empty tree
     tree = None
     if is_valid_BST(tree):
@@ -73,3 +82,5 @@ if __name__ == '__main__':
     else:
         print("Test 4 (non-valid tree) failed!")
     
+if __name__ == '__main__':
+    main()

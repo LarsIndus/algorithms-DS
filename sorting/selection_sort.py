@@ -22,18 +22,16 @@ def selection_sort(my_list):
                 min_pos = scan_pos
  
         # Swap the two values
-        #temp = my_list[min_pos]
-        #my_list[min_pos] = my_list[cur_pos]
-        #my_list[cur_pos] = temp
         my_list[min_pos], my_list[cur_pos] = my_list[cur_pos], my_list[min_pos]
         
 
-if __name__ == '__main__':   
-    def print_list(my_list):
+def print_list(my_list):
         for item in my_list:
-            print("{:3}".format(item), end="")
+            print("{:3}".format(item), end = "")
         print()
-    
+
+# Testing --------------------------------------------------------------------
+def main():
     # Create a list of random numbers
     my_list = []
     for i in range(10):
@@ -43,3 +41,6 @@ if __name__ == '__main__':
     print_list(my_list)
     selection_sort(my_list)
     print_list(my_list)
+
+if __name__ == '__main__':
+    main()

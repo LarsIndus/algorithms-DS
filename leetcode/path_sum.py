@@ -1,16 +1,16 @@
 """
-Leetcode Problem 112:
+Leetcode Problem 112: Path Sum (Easy)
 
-Given a binary tree and a target sum, decide whether there is a path
-from the root node to a leave, such that the sum of all nodes in this path equals the sum.
+Given a binary tree and a sum, determine if the tree has a root-to-leaf path
+such that adding up all the values along the path equals the given sum.
 
-Time and space complexity of this solution is O(n),
-with n denoting the number of nodes in the tree.
+Complexity for this solution:
+O(n) time and O(1) space
 
 Source: https://www.youtube.com/watch?v=IIPJ9tRYsg0
 """
 
-# Node implementation ------------------------------------------------------------------
+# Node implementation --------------------------------------------------------
 class newNode:  
   
     # Construct to create a newNode  
@@ -19,7 +19,7 @@ class newNode:
         self.left = None
         self.right = None
 
-# Solution -----------------------------------------------------------------------------
+# Solution -------------------------------------------------------------------
 def path_sum(root, target):
     if root is None:
         return False
@@ -29,11 +29,8 @@ def path_sum(root, target):
     target -= root.data
     return path_sum(root.left, target) or path_sum(root.right, target)
 
-
-# Testing -----------------------------------------------------------------------
-
-if __name__ == '__main__':
-    
+# Testing --------------------------------------------------------------------
+def main():
     # Test 1: Empty tree
     tree = None
     if not path_sum(tree, 1):
@@ -64,3 +61,6 @@ if __name__ == '__main__':
         print("Passed test 4 (two leaves).")
     else:
         print("Test 4 (two leaves) failed!")
+
+if __name__ == '__main__':
+    main()

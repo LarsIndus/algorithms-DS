@@ -23,9 +23,11 @@ def print_array(arr):
         print(k)
     print()
 
-
-if __name__ == '__main__':
+# Testing --------------------------------------------------------------------
+def main():
     arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1] 
     arr = dutch_flag_sorting(arr)
     print_array(arr)
-         
+
+if __name__ == '__main__':
+    main()

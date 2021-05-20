@@ -1,11 +1,12 @@
 """
-Leetcode Problem 78:
+Leetcode Problem 78: Subsets (Medium)
 
-Given a set of distinct integers, return all possible subsets (i.e., the power set).
-The solution must not contain duplicate subsets.
+Given an integer array nums of unique elements, return all possible subsets (the power set).
 
-This solution has time and space complexity O(n * 2^n)
-(2^n subsets and traverse at most n times to generate each subset).
+The solution set must not contain duplicate subsets. Return the solution in any order.
+
+Complexity for this solution:
+O(n * 2^n) time and space (2^n subsets and traverse at most n times to generate each subset).
 If we don't consider the space for the final result, space complexity becomes O(n)
 (e.g., when just asked to print the subsets instead of saving them).
 
@@ -23,11 +24,16 @@ def helper(nums, sol, curr, index):
     for i in range(index, len(nums)):
         curr.append(nums[i])
         helper(nums, sol, curr, i + 1)
-        # 'pop' returns a value, but we don't need that. We can just delete the last value using 'del'.
+        # 'pop' returns a value, but we don't need that.
+        # We can just delete the last value using 'del'.
         #curr.pop()
         del curr[-1]
-        
-if __name__ == '__main__':
+
+# Testing --------------------------------------------------------------------
+def main():
     nums = [1, 2, 3]
-    subsets = subsets(nums)
-    print(subsets)
+    power_set = subsets(nums)
+    print(power_set)
+
+if __name__ == '__main__':
+    main()

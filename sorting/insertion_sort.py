@@ -7,8 +7,7 @@ def insertion_sort(my_list):
     """ Sort a list using the insertion sort """
  
     # Start at the second element (pos 1).
-    # Use this element to insert into the
-    # list.
+    # Use this element to insert into the list.
     for key_pos in range(1, len(my_list)):
  
         # Get the value of the element to insert
@@ -30,11 +29,11 @@ def insertion_sort(my_list):
 
 def print_list(my_list):
     for item in my_list:
-        print("{:3}".format(item), end="")
+        print("{:3}".format(item), end = "")
     print()
  
-# testing the code
-if __name__ == '__main__':
+# Testing --------------------------------------------------------------------
+def main():
     my_list = []
     for i in range(10):
         my_list.append(random.randrange(100))
@@ -43,3 +42,6 @@ if __name__ == '__main__':
     print_list(my_list)
     insertion_sort(my_list)
     print_list(my_list)
+
+if __name__ == '__main__':
+    main()

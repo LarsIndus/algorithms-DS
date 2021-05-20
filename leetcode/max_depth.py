@@ -1,13 +1,17 @@
 """
-Leetcode Problem 104:
+Leetcode Problem 104: Maximum Depth of Binary Tree (Easy)
 
-Given a binary tree, what is the maximumm depth of the tree?
+Given a binary tree, find its maximum depth.
 
+The maximum depth is the number of nodes along the longest path
+from the root node down to the farthest leaf node.
+
+Complexity for this solution:
 Time and space complexity is O(n) with n being the nuber of nodes in the tree.
 Average space complexity is O(log n) for a balanced tree.
 """
 
-# Node implementation ------------------------------------------------------------------
+# Node implementation --------------------------------------------------------
 class newNode:  
   
     # Construct to create a newNode  
@@ -16,7 +20,7 @@ class newNode:
         self.left = None
         self.right = None
 
-# This is my initial solution: --------------------------------------------------
+# This is my initial solution: -----------------------------------------------
 def max_depth(root):
     
     if root.value is None: return 0
@@ -30,7 +34,7 @@ def max_depth(root):
     
     return depth
 
-# Optimized code: ------------------------------------------------------------------
+# Optimized code: ------------------------------------------------------------
 def max_depth_alternative(root):
     
     if root.value is None: return 0
@@ -41,8 +45,8 @@ def max_depth_alternative(root):
     
     return depth
 
-# Testing ---------------------------------------------------------------------------- 
-if __name__ == '__main__':
+# Testing --------------------------------------------------------------------
+def main():
       
     # Test 1:
     root = newNode(5)
@@ -67,3 +71,6 @@ if __name__ == '__main__':
     root = newNode(1)
     
     print("The depth of the tree is:", max_depth(root))
+
+if __name__ == '__main__':
+    main()

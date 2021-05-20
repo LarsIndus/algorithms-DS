@@ -7,19 +7,15 @@ def countSetBits(x) :
     count = 0
       
     while (x) : 
-        x = x & (x-1) 
+        x = x & (x - 1) 
         count = count + 1
       
     return count 
       
-# Returns true if n 
-# is Bleak 
 def isBleak(n) : 
   
-    # Check for all numbers 'x' 
-    # smaller than n. If x +  
-    # countSetBits(x) becomes 
-    # n, then n can't be Bleak. 
+    # Check for all numbers 'x' smaller than n.
+    # If x + countSetBits(x) becomes n, then n can't be bleak. 
     for x in range(1, n) : 
           
         if (x + countSetBits(x) == n) : 
@@ -27,14 +23,14 @@ def isBleak(n) :
               
     return True
       
-# Driver code 
+# Testing --------------------------------------------------------------------
+def main():
+    nums = [3, 4, 5, 10]
+    for n in nums:
+        if (isBleak(n)) : 
+            print(n, " is bleak.", sep = "") 
+        else : 
+            print(n, " is not bleak.", sep = "")
+
 if __name__ == '__main__':
-    if(isBleak(3)) : 
-        print( "Yes") 
-    else : 
-        print("No") 
-    
-    if(isBleak(4)) : 
-        print("Yes") 
-    else :  
-        print( "No") 
+    main()

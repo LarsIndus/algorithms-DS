@@ -1,3 +1,5 @@
+# Functions to check whether y is a power of x.
+
 def is_power(x, y):
     
     if y == 1:
@@ -37,7 +39,8 @@ def is_power_short(x, y):
     print(pow == y)
     return (pow == y)
 
-if __name__ == '__main__':
+# Testing --------------------------------------------------------------------
+def main():
     is_power(5, 1)
     is_power(1, 1)
     is_power(1, 5)
@@ -54,4 +57,5 @@ if __name__ == '__main__':
     is_power_short(5, 25)
     is_power_short(19, 19 ** 15)           
             
-        
+if __name__ == '__main__':
+    main()

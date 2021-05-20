@@ -1,11 +1,13 @@
 """
-Leetcode Problem 62:
+Leetcode Problem 62: Unique Paths (Medium)
 
-Given an nxm matrix, how many paths are there going from the
-top left corner to the bottom right corner
-if we can only move to the right and down?
+A robot is located at the top-left corner of a m x n grid.
+The robot can only move either down or right at any point in time.
+The robot is trying to reach the bottom-right corner of the grid.
+How many possible unique paths are there?
 
-Time and space complexity of this solution is O(nm).
+Complexity for this solution:
+O(nm) time and space (linear in grid size)
 
 Source: https://www.youtube.com/watch?v=RYpd5VzxlKQ
 """
@@ -19,3 +21,12 @@ def unique_paths(n, m):
             mat[i][j] = mat[i - 1][j] + mat[i][j - 1]
             
     return mat[n - 1][m - 1]
+
+# Testing --------------------------------------------------------------------
+def main():
+    n = 3
+    m = 5
+    print(unique_paths(n, m))
+
+if __name__ == '__main__':
+    main()

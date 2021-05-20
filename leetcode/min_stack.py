@@ -1,18 +1,19 @@
 """
-# Leetcode Problem 155:
+Leetcode Problem 155: Min Stack (Easy)
 
-Design a stack that supports push, pop, top and retrieving the minimum element in constant time.
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
-    - push(x): Push element x onto stack.
-    - pop(): Remove the element on top of the stack.
-    - top(): Get the top element.
-    - get_min(): Retrieve the minimum element in the stack (in constant time).
+    - push(x) -- Push element x onto stack.
+    - pop() -- Removes the element on top of the stack.
+    - top() -- Get the top element.
+    - getMin() -- Retrieve the minimum element in the stack.
 
 Source: https://www.youtube.com/watch?v=2wqSq2Lde-Q
 """
 
 # Every time we push, we update the current minimum value.
-# Similarly, every time we pop, we update the minimum value by traversing through the remaining elements.
+# Similarly, every time we pop, we update the minimum value
+# by traversing through the remaining elements.
 # This way, the get_min() method can return the minimum in constant time.
 
 class Min_Stack():
@@ -46,3 +47,21 @@ class Min_Stack():
     
     def get_min(self):
         return self.min_val
+
+# Testing --------------------------------------------------------------------
+def main():
+    obj = Min_Stack()
+    obj.push(1)
+    obj.push(2)
+    obj.push(3)
+    print("Element on top: ", obj.top(), sep = "")
+    print("Popped the following: ", obj.pop(), sep = "")
+    print("Now on top: ", obj.top(), sep = "")
+    print("Current min: ", obj.get_min(), sep = "")
+    obj.push(-1)
+    print("Current min: ", obj.get_min(), sep = "")
+
+
+
+if __name__ == '__main__':
+    main()
